@@ -64,3 +64,9 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+# SoulBoundToken
+
+## Deployment and Verification
+- https://sepolia.etherscan.io/address/0x27e28cf55a319e6af0b7a23d8b623b8bc2c50485
+Transactions saved to: SoulBoundToken/broadcast/Deploy.s.sol/11155111/run-latest.json#
