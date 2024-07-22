@@ -9,6 +9,8 @@ interface IW3BCXISoulboundToken {
 
     function mint() external;
 
+    function batchMint(address[] memory addresses) external;
+
     function isWhitelisted(address account) external view returns (bool);
 
     function hasMinted(address account) external view returns (bool);

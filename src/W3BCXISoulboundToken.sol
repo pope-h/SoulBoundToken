@@ -34,6 +34,17 @@ contract W3BCXISoulboundToken is ERC20, Ownable {
         _mint(msg.sender, TOKENS_PER_MINT);
     }
 
+    function batchMint(address[] memory addresses) external onlyOwner {
+        for (uint i = 0; i < addresses.length; i++) {
+            address recipient = addresses[i];
+            require(_whitelist[recipient], "Address is not whitelisted");
+            require(!_hasMinted[recipient], "Address has already minted");
+
+            _hasMinted[recipient] = true;
+            _mint(recipient, TOKENS_PER_MINT);
+        }
+    }
+
     function _update(address from, address to, uint256 amount)
         internal
         override
