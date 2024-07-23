@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import {Script, console} from "forge-std/Script.sol";
 import "../src/interface/IW3BCXISoulboundToken.sol";
 
-contract InteractionScript is Script {
+contract BatchDeployScript is Script {
     IW3BCXISoulboundToken public W3BCXISBT;
 
     function setUp() public {
